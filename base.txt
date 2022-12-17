@@ -1,0 +1,76 @@
+yarn create vite
+cd <project>
+yarn install
+yarn add @chakra-ui/react @emotion/react @emotion/styled framer-motion @chakra-ui/icons @fontsource/youngserif uuid zustand
+
+
+1. limpiar app.tsx de codigo. Sacar el include del .css
+2. Incluir chakra, el theme y el provider
+3. Buscar un lindo fondo
+4. Copiarlo a /public como xmas.jpg
+
+1. Number:
+
+import {
+  NumberInput,
+  NumberInputField,
+  NumberInputStepper,
+  NumberIncrementStepper,
+  NumberDecrementStepper,
+} from '@chakra-ui/react'
+
+                <NumberInput w={20} defaultValue={1} min={1} onChange={(n: any) => setNewGiftAmount(n)}>
+                  <NumberInputField />
+                  <NumberInputStepper>
+                    <NumberIncrementStepper />
+                    <NumberDecrementStepper />
+                  </NumberInputStepper>
+                </NumberInput>
+
+
+
+https://loremflickr.com/320/240/?lock=212
+
+https://loremflickr.com/50/50/?lock=1
+https://loremflickr.com/50/50/?lock=2
+https://loremflickr.com/50/50/?lock=3
+
+
+
+function DrawerExample() {
+  const { isOpen, onOpen, onClose } = useDisclosure()
+  const btnRef = React.useRef()
+
+  return (
+    <>
+      <Button ref={btnRef} colorScheme='teal' onClick={onOpen}>
+        Open
+      </Button>
+      <Drawer
+        isOpen={isOpen}
+        placement='right'
+        onClose={onClose}
+        finalFocusRef={btnRef}
+      >
+        <DrawerOverlay />
+        <DrawerContent>
+          <DrawerCloseButton />
+          <DrawerHeader>Create your account</DrawerHeader>
+
+          <DrawerBody>
+            <Input placeholder='Type here...' />
+          </DrawerBody>
+
+          <DrawerFooter>
+            <Button variant='outline' mr={3} onClick={onClose}>
+              Cancel
+            </Button>
+            <Button colorScheme='blue'>Save</Button>
+          </DrawerFooter>
+        </DrawerContent>
+      </Drawer>
+    </>
+  )
+}
+
+import { v4 as uuidv4 } from 'uuid';
