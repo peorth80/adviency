@@ -68,7 +68,7 @@ La API hoy tiene los metodos basicos:
 - Borrar
 
 ### Insomnia
-En el archivo [insomnia_2022-12-21.json](Insomnia_2022-12-21.json) estab los metodos
+En el archivo [insomnia_2022-12-21.json](Insomnia_2022-12-21.json) estan los metodos para poder probar la API
 
 ## TODO
 - Agregar automapper y mediatr para ordenar un poco el codigo
