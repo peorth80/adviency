@@ -11,7 +11,7 @@ function App() {
     <div className="App">
       <Flex w="100vw" h="100vh" justifyContent="center" align="center" bg="url('/xmas.jpg')">
         <Center>
-          <Box bgColor="white" w={300}>
+          <Box bgColor="white" w={300} p={3}>
             <Heading>Regalos 15</Heading>
 
             <AddGift></AddGift>

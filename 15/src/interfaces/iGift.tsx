@@ -8,5 +8,13 @@ export interface iGift {
 
 export interface iGifts {
     gifts: iGift[],
-    addGift: (gift: iGift) => void
+    addGift: (gift: iGift) => void,
+    editGift: (gift: iGift) => void,
+    deleteGift: (gift: iGift) => void,
+    setGifts: (gifts: iGift[]) => void,
+
+    giftToEdit: iGift,
+    setGiftToEdit: (gifts: iGift) => void,
+
+    deleteAllGifts: () => void
 }
