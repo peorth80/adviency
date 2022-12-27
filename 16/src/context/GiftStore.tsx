@@ -14,7 +14,34 @@ const giftStore = create<iGifts>()(
                     set(
                         (state) => ({ gifts: [...state.gifts, gift] })
                     );
+                },
+                delete: (id) => {
+                    set(
+                        (state) => ({ gifts: state.gifts.filter(x => x.id != id) })
+                    )
+                },
+                deleteAll: () => {
+                    set(
+                        () => ({ gifts: [] })
+                    )
+                },
+                edit: (gift: iGift) => {
+                    set(
+                        (state) => ({
+                            gifts: state.gifts.map(x => {
+                                return (x.id == gift.id) ? gift : x;
+                            }
+                            )
+                        })
+                    )
+
                 }
+                ,
+                setGiftToEdit: (gift: iGift) => {
+                    set(
+                        () => ({ giftToEdit: gift })
+                    )
+                },
             })
         , { name: "gifts" })
 );
