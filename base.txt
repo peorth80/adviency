@@ -99,7 +99,7 @@ const giftStore = create<iGifts>()(
 export default giftStore;
 
 
-
+const { isOpen, onOpen, onClose } = useDisclosure()
 const cancelRef = React.useRef(null)
 
       <AlertDialog
