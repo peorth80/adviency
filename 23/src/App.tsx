@@ -16,7 +16,7 @@ function App() {
         <Center>
           <Box bgColor="white" p={4}>
             <HStack m={3}>
-              <Heading>Regalos 22</Heading>
+              <Heading>Regalos 23</Heading>
               <Spacer></Spacer>
               <PlayMusic></PlayMusic>
             </HStack>
